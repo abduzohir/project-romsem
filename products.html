@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <!-- navbar -->
+  <nav class="my-navbar navbar">
+    <div class="container my-navbar__content">
+      <div class="my-navbar__navigation d-flex align-items-center">
+        <a href="#menu" class="my-navbar__btn d-md-flex d-none" data-bs-toggle="offcanvas">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <a href="#!" class="my-navbar__logo d-flex d-md-none">
+          <img src="images/logo.png" alt="">
+        </a>
+      </div>
+      <div class="phones d-flex flex-md-column align-items-center justify-content-around">
+        <div class="d-flex flex-column align-items-center">
+          <h3>Наш телефон</h3>
+          <a href="#!" class="phones__num">+996 705 188 955</a>
+          <a href="#!" class="phones__num">+996 555 188 955</a>
+        </div>
+        <p class="phones__time icon-clock d-flex flex-md-row flex-column">
+          <span>работаем</span>
+          <span>с 10:00 до 00:00</span>
+        </p>
+      </div>
+      <div class="my-navbar__content--list d-md-flex d-none align-items-center justify-content-between">
+        <div class="city">
+          <p>Город:</p>
+          <h3>Бишкек</h3>
+        </div>
+        <ul class="nav-list navbar-nav flex-row">
+          <li><a href="index.html" style="color: var(--orange-red);">Домой</a></li>
+          <li><a href="#!">Отзывы</a></li>
+          <li><a href="#!">Доставка и оплата</a></li>
+        </ul>
+      </div>
+      <div class="my-navbar__icons d-flex align-items-center">
+        <a href="#cart" class="cart icon-cart d-md-flex d-none" data-bs-toggle="offcanvas"></a>
+        <a href="#!" class="search icon-search "></a>
+      </div>
+    </div>
+    
+    <!-- menu left -->
+    <div class="offcanvas offcanvas-start menu" id="menu">
+      <div class="offcanvas-header d-flex flex-column align-items-center">
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"></button>
+        <a href="#!" class="menu__logo">
+          <img src="images/logo.png" alt="">
+          <span>Romsem</span>
+        </a>
+      </div>
+      <div class="offcanvas-body d-flex justify-content-center">
+        <ul class="menu__list navbar-nav">
+          <li><a class="" href="#!"><img src="images/icon-menu/item1.svg" alt=""><span>Пицца</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item2.svg" alt=""><span>Сеты</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item3.svg" alt=""><span>WOK</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item4.svg" alt=""><span>Роллы</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item5.svg" alt=""><span>Суши</span></a></li>
+          <li><a class="soon" href="#!"><img src="images/icon-menu/item6.svg" alt=""><span>Салаты</span></a></li>
+          <li><a class="soon" href="#!"><img src="images/icon-menu/item7.svg" alt=""><span>Супы</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item8.svg" alt=""><span>Корн доги</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item9.svg" alt=""><span>Напитки</span></a></li>
+          <li><a class="" href="#!"><img src="images/icon-menu/item10.svg" alt=""><span>Акции</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- menu cart -->
+    <div class="offcanvas offcanvas-end" id="cart">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="cart__product">
+          <h3>Ваша корзина пуста.</h3>
+          <a href="#!" class="cart__product--add">Добавьте же скорее что-нибудь!</a>
+          <p>Бесплатная доставка от 800 СОМ</p>
+        </div>
+        <div class="cart__map">
+          <div class="cart__map--location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.023188467725!2d69.19885431573785!3d41.2648310115461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d939b6e29731cd3!2zNDHCsDE1JzUzLjQiTiA2OcKwMTInMDMuOCJF!5e0!3m2!1sru!2s!4v1637233727432!5m2!1sru!2s" loading="lazy"></iframe>
+          </div>
+          <div class="cart__map--info">
+            <span class="icon-marker"></span>
+            <h3>Укажите адрес</h3>
+            <p>И узнайте время доставки</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar-bottom position-fixed bottom-0 w-100 d-md-none d-flex">
+    <div class="container d-flex justify-content-center">
+      <a href="#menu" data-bs-toggle="offcanvas">
+        <img src="images/icon-menu-bottom/icon1.svg" alt="">
+        <span>меню</span>
+      </a>
+      <a href="#cart" data-bs-toggle="offcanvas">
+        <img src="images/icon-menu-bottom/icon2.svg" alt="">
+        <span>Корзина</span>
+      </a>
+      <a href="#!">
+        <img src="images/icon-menu-bottom/icon3.svg" alt="">
+        <span>Отзывы</span>
+      </a>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- products -->
+  <section class="products container">
+    <div class="row">
+      <div class="col-sm-6 d-flex justify-content-center justify-content-sm-start">
+        <h2 class="products__title">
+          <img src="images/icon-menu/item2.svg" alt="">
+          <span>Сеты</span>
+        </h2>
+      </div>
+      <div class="col-sm-6 d-flex justify-content-sm-end justify-content-center">
+        <div class="products__sort d-flex justify-content-end">
+          <a class="products__sort--toggle d-flex flex-sm-column align-items-sm-start align-items-center" href="#" data-bs-toggle="dropdown">
+            <span>Сортировка</span>
+            <p class="icon-chevrone-down d-flex flex-row-reverse justify-content-between">По умолчанию</p>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#">По умолчанию</a>
+            <a href="#">Название</a>
+            <a href="#">Сначала дешевле</a>
+            <a href="#">Сначала дороже</a>
+            <a href="#">Количество кусочков</a>
+            <a href="#">Вес</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row products__cards">
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="product">
+          <img src="images/sets/Rectangle1.png" alt="" class="product__img">
+          <div class="product-wrap">
+            <div class="product__content">
+              <h3>Саломон сет</h3>
+              <p>1050 грамм, 30 кусочков</p>
+            </div>
+            <div class="product__price">
+              <span>1500 СОМ</span>
+              <a href="#!" class="product__price--btn">Хочу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- products end -->
+  
+  <!-- content  -->
+  <section class="content container d-flex flex-column align-items-center">
+    <div class="content__text w-100">
+      <h3>Заказать суши в Бишкеке</h3>
+      <p>Ресторан “Суши и Лапша” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.</p>
+      <p>В нашем меню более 20 видов суши:</p>
+      <ul>
+        <li>Классические с сырым лососем, тунцом, окунем.</li>
+        <li>Экзотические с тигровой креветкой, морским гребешком.</li>
+        <li>Пикантные с копченым лососем, угрем.</li>
+      </ul>
+      <p>В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.</p>
+    </div>
+    <a href="#!" class="content__btn icon-chevrone-down d-flex flex-row-reverse align-items-center">Подробнее</a>
+  </section>
+  <!-- content end -->
+  
+  <!-- footer -->
+  <footer class="footer container">
+    <div class="row">
+      <div class="col-md-4 footer-box">
+        <ul class="footer-box__list navbar-nav">
+          <li><a href="#!">О компании</a></li>
+          <li><a href="#!">Доставка и оплата</a></li>
+          <li><a href="#!">Лента материалов</a></li>
+          <li><a href="#!">Политика возврата</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-box d-flex justify-content-center">
+        <div class="footer-box__content">
+          <h3>Введите номер</h3>
+          <span>+996 (__) ___ __ __</span>
+          <p>Выберите удобный мессенджер для общения</p>
+          <ul class="footer-box__content--social navbar-nav flex-row justify-content-between align-items-center">
+            <li><a href="#!" class="icon-whatsapp"></a></li>
+            <li><a href="#!" class="icon-telegram"></a></li>
+            <li><a href="#!" class="icon-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 footer-box d-flex flex-column">
+        <a href="#!" class="footer-box__contacts">Тел:<span>+996 705 188 955</span></a>
+        <a href="#!" class="footer-box__contacts">Тел:<span>+996 555 188 955</span></a>
+        <p class="footer-box__address">Адрес:Бакаева 126</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  
+  
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
